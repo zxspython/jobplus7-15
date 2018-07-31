@@ -6,7 +6,7 @@ from wtforms import StringField,PasswordField,SubmitField, BooleanField, Validat
 from wtforms.validators import Required,Length,EqualTo,Email,URL
 from jobplus.models import db,User,Company
 
-class RegisterForm():
+class RegisterForm(FlaskForm):
     username = StringField('用户名',validators=[Required(),Length(3,24)])
     email = StringField('邮件',validators=[Required(),Email()])
     password = PasswordField('密码',validators=[Required(),Length(6,24)])
@@ -103,3 +103,4 @@ class AddCompanyForm(FlaskForm):
         db.session.add(company)
         db.session.commit()
         return company
+        fadsadsfdsafj;lkfdsajlk;afdslkj
